@@ -3,7 +3,7 @@ title: "Omnic Ideas"
 
 # Default header image
 header_img:
-  url: "assets/img/home-bg.jpg"
+  url: ""
 
 comments:
   enabled: false
