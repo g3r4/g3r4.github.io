@@ -82,6 +82,26 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if site.social_networks.twitch %}
+                    <li>
+                        <a href="https://www.twitch.tv/{{ site.social_networks.twitch }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitch fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_networks.drupal %}
+                    <li>
+                        <a href="https://www.drupal.org/u/{{ site.social_networks.drupal }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-drupal fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ 'now' | date('Y') }}.
