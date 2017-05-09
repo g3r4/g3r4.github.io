@@ -4,6 +4,7 @@ title: "I&#039;m a developer"
 subtitle:   "Syntax highlighting using Javascript"
 date:       "2015-01-23 20:00:00"
 author:     "Spress add-ons"
+categories: [tech, drupal]
 header_img:
   url: "assets/img/post-bg-07.jpg"
   author: Yuri Samoilov

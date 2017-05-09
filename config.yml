@@ -6,8 +6,8 @@ header_img:
   url: ""
 
 comments:
-  enabled: false
-  disqus_shortname: ""
+  enabled: true
+  disqus_shortname: "flashing-insights"
 
 social_networks:
     twitter: "_g3r4" # Your id without @
@@ -21,4 +21,4 @@ social_networks:
 # Forms
 forms:
     contact:
-        getsimpleform_api_token: 
+        getsimpleform_api_token: b27d9179d3133b919de839777b520876

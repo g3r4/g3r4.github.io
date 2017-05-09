@@ -14,15 +14,6 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta">Posted by {{ page.author }} on {{ now | date('F jS \\a\\t g:ia') }}</span>
-                    {% if page.header_img.author %}
-                    <br>
-                    <span class="meta">Photo by 
-                        {% if page.header_img.author_url %}
-                        <a href="{{ page.header_img.author_url }}">{{ page.header_img.author }}</a>
-                        {% else %}
-                        {{ page.header_img.author }}</span>
-                        {% endif %}
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -30,6 +21,18 @@ layout: default
 </header>
     
 <!-- Post Content -->
+<div class="container">
+    <div class="row">
+        {% if page.header_img.author %}
+        <span class="caption photo-credits">Photo by
+                {% if page.header_img.author_url %}
+                    <a href="{{ page.header_img.author_url }}">{{ page.header_img.author }}</a>
+                {% else %}
+                    {{ page.header_img.author }}</span>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>
 <article>
     <div class="container">
         <div class="row">

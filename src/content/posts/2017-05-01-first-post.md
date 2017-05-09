@@ -3,14 +3,14 @@ layout: post
 title: "First Post"
 subtitle:   "Welcome to my blog"
 categories: [random]
-tags: [first post, inauguration]
 date:       "2017-05-01 21:00:00"
 author:     "Gerardo"
 header_img:
   url: "assets/img/first-post.jpg"
-  author: kazuend
-  author_url: https:twitter.com/kazuend
+  author: "Florian Kurrasch"
+  author_url: https://www.instagram.com/fln.krs/
 ---
 
-<p>I am very happy with this first version, it actually took me a while to figure out how to deploy, and how to get the 
-banner for the home page right, but I think this will work to suit my needs to share:).</p>
+<p>I am very happy with my new blog, it actually took me a while to figure out how to tweak it, organize it, and deploy it, 
+and how to get the video-banner for the home page right!, let this be the start of a new adventure in sharing all
+kinds of things.</p>

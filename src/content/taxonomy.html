@@ -1,12 +1,19 @@
 ---
-layout: "index"
-description: "A Blog about technology and random things"
+layout: "page"
+header_img:
+  url: "assets/img/taxonomy.jpg"
+  author: "Manuele Sangalli"
 
-generator: "pagination"
-provider: "site.posts"
+generator: "taxonomy"
 max_page: 5
-sort_by: "date"
+taxonomy_attribute: "categories"
+permalink: "/:name"
 ---
+
+<div class="taxonomy-page-header">
+    <h1>{{ page.term|capitalize}} <small>category posts</small></h1>
+</div>
+
 {% for post in page.pagination.items %}
 <div class="post-preview">
     <a href="{{ site.url }}{{ post.url }}">
