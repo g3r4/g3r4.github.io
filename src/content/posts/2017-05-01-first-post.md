@@ -7,7 +7,7 @@ tags: [first post, inauguration]
 date:       "2017-05-01 21:00:00"
 author:     "Gerardo"
 header_img:
-  url: "assets/img/kazuend-25774.jpg"
+  url: "assets/img/first-post.jpg"
   author: kazuend
   author_url: https:twitter.com/kazuend
 ---
