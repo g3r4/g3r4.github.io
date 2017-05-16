@@ -129,11 +129,13 @@ hr.small {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 90rem;
+  width: 100vw;
+  height: 23vh;
 }
 @media only screen and (min-width: 768px) {
   .vid {
     width: 200rem;
+    height: 44.5vh;
   }
 }
 .intro-header {
@@ -188,6 +190,7 @@ hr.small {
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
+  text-shadow: 2px 2px 4px #000000;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -199,12 +202,14 @@ hr.small {
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
+  text-shadow: 2px 2px 4px #000000;
 }
 .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
+  text-shadow: 2px 2px 4px #000000;
 }
 .intro-header .post-heading .meta a {
   color: white;
@@ -212,9 +217,11 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
+    text-shadow: 2px 2px 4px #000000;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
+    text-shadow: 2px 2px 4px #000000;
   }
 }
 .post-preview > a {
