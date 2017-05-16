@@ -1,6 +1,6 @@
 ---
 layout: "index"
-description: "A Blog about technology and random things"
+description: "A Blog about Drupal, technology and random things"
 
 generator: "pagination"
 provider: "site.posts"
@@ -19,7 +19,7 @@ sort_by: "date"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date('F jS \\a\\t g:ia') }} </p>
+    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date('F jS') }} </p>
 
     <p class="text-info">
         {% for category in post.categories %}
