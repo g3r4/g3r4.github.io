@@ -130,12 +130,12 @@ hr.small {
   left: 0;
   right: 0;
   width: 100vw;
-  height: 23vh;
+  height: 48vh;
 }
 @media only screen and (min-width: 768px) {
   .vid {
     width: 200rem;
-    height: 44.5vh;
+    height: auto;
   }
 }
 .intro-header {
