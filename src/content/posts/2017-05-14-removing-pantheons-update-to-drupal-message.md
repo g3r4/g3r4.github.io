@@ -85,6 +85,6 @@ version on your site and the Dashboard message would be gone.
 
 ##Disclaimer
 
-This should be done and created using a build artifact, but if you like me were on a deadline and with no time to 
+This should be done and created using a build artifact, but if you like me are on a tight deadline and with no time to 
 implement a build artifact, this will at least help you getting rid of those messages when you've already updated your
 code to the latest Drupal 8 version. More info on Pantheon's own post here: [Merge Conflicts](https://pantheon.io/docs/composer-drupal-8/#merge-conflicts)
