@@ -13,13 +13,20 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
+                    {% if page.tags %}
+                      {% for tag in page.tags %}
+                        <span class="label label-default">{{ tag }}</span>
+                      {% endfor %}
+                      <br>
+                    {% endif %}
+                    <br>
                     <span class="meta">Posted by {{ page.author }} on {{ now | date('F jS') }}</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
-    
+
 <!-- Post Content -->
 <div class="container">
     <div class="row">
@@ -49,7 +56,7 @@ layout: default
                     <noscript>
                         Please enable JavaScript to view the
                         <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                    </noscript> 
+                    </noscript>
                     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
                 </section>
                 {% endif %}
@@ -65,7 +72,7 @@ layout: default
     {% if (page.comments is defined and page.comments) or (page.comments is not defined and site.comments.enabled) %}
         <script type="text/javascript">
             var disqus_shortname = '{{ site.comments.disqus_shortname }}';
-            
+
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

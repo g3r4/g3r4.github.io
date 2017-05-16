@@ -3,6 +3,7 @@ layout: post
 title: "How to add Docksal to an existing project"
 subtitle: "With a practical example"
 categories: [drupal]
+tags: [drupal 8, docksal, devops, composer, local stack, drupalvm]
 author:     "Gerardo"
 header_img:
   url: "assets/img/containers.jpg"
@@ -27,7 +28,7 @@ a different number of projects.
 
 We will be using composer for this step, if you don't have it, you can download it from here: [Get Composer](https://getcomposer.org/download/)
 
-Once you have composer installed locally, you can create a new project using [Drupal Composer](https://github.com/drupal-composer/drupal-project): 
+Once you have composer installed locally, you can create a new project using [Drupal Composer](https://github.com/drupal-composer/drupal-project):
 
 ```bash
 composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction
@@ -42,13 +43,13 @@ if you are using MacOS or Windows, you will need VirtualBox and execute the comm
 at the time of writing this post, only Linux supports running containers natively, in the case of the other OSs a thin VM
 is required to run the docker containers.
 
-[The official setup documentation](http://docksal.readthedocs.io/en/master/getting-started/setup/#setup-instructions), 
+[The official setup documentation](http://docksal.readthedocs.io/en/master/getting-started/setup/#setup-instructions),
 suggests that we clone a Drupal 8 project from their [Github repository](https://github.com/docksal/drupal8), I do not
-like this idea a lot because that Drupal 8 code might be outdated, and what we would like to do is to add Docksal 
+like this idea a lot because that Drupal 8 code might be outdated, and what we would like to do is to add Docksal
 to our projects, that is why we are creating one for ourselves, however, we will use a couple of files from that
 repository as a base for our project.
 
-Go ahead and create a .docksal folder inside the Drupal Project we just created, you should have a folder structure 
+Go ahead and create a .docksal folder inside the Drupal Project we just created, you should have a folder structure
 like this:
 
 ```
@@ -116,7 +117,7 @@ Creating drupal8_web_1
 Connected vhost-proxy to "drupal8_default" network.
 ```
 
-After that, you can open your browser and go to [drupal8.docksal](drupal8.docksal) and you will see the 
+After that, you can open your browser and go to [drupal8.docksal](drupal8.docksal) and you will see the
 Drupal 8 installation page, however, if you want to quickly install Drupal without having to deal with
 the GUI, you can use this Drupal Console command, go to your project's web folder and run :
 
@@ -131,8 +132,8 @@ Don't forget to read [Docksal's basic commands](http://docksal.readthedocs.io/en
 
 ## Troubleshooting
 
-If you already have DrupalVM or any other vagrant machine, you might have an issue when running `fin vm start`, if this 
-happens to you, try to delete your `/etc/exports` file and run `fin vm start` or `fin vm restart` again, this file gets 
+If you already have DrupalVM or any other vagrant machine, you might have an issue when running `fin vm start`, if this
+happens to you, try to delete your `/etc/exports` file and run `fin vm start` or `fin vm restart` again, this file gets
 created each time you start your VM, likewise, if you want to run your DrupalVM after playing with Docksal, you need
 to remove that file before you run `vagrant up`.
 
@@ -166,6 +167,6 @@ Stack trace:
 This is because the latest version Drupal Console (RC19) needs `webflo/drupal-finder:^0.3.0` which is already installed
 when you created your Drupal project using composer create-project, but the Global Drupal Console launcher might be outdated,
  in order to fix this, from your projects root, execute `fin bash` this will take you to your containers "terminal",
- try to update drupal console launcher from there with `sudo drupal self-update`, if that fails, you can follow the 
+ try to update drupal console launcher from there with `sudo drupal self-update`, if that fails, you can follow the
  instructions to reinstall [Drupal Console Global Launcher](https://hechoendrupal.gitbooks.io/drupal-console/content/en/getting/launcher.html)
  you might need to run those commands with sudo in order for them to properly work.
