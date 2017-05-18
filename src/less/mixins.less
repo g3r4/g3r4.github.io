@@ -1,3 +1,5 @@
+@import "variables.less";
+
 // Mixins
 
 .transition-all() {
@@ -19,4 +21,11 @@
 
 .sans-serif () {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// Media query mixin.
+
+.bp(@min,@rules) {
+  @query: ~"(min-width: @{@{min}})";
+  @media @query {@rules();}
 }

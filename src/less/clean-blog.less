@@ -155,22 +155,29 @@ hr.small {
 // Video
 
 .vid {
+	// Lines 10-14 make the background video huge and offscreen. The margin auto brings it back directly into the center.
+	// Note: this will center the video at all times, so if you WANT the bulb off to the side, this would need to be adjusted
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100vw;
-	height: 48vh;
-	@media only screen and (min-width: 768px) {
-		width: 200rem;
-		height: auto;
-	}
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+	height: 100%; // just ensuring it's full height.
+	padding-top: 50px; // height of your header at mobile.
+	opacity: .8; // dims the video down a bit at mobile.
+
+	.bp(tablet; {
+		opacity: 1; // brings the video back up to full opacity. This may or may not be needed, depending on the overlay.
+		padding-top: 0; // pushes the video back up to the top so your transparent nav bar appears correctly.
+	});
 }
 
 // Header
 
 .intro-header {
+	position: relative;
+	min-height: 40rem;
 	background-color: @gray; 
 	background: no-repeat center center; 
 	background-attachment: scroll;
@@ -197,7 +204,7 @@ hr.small {
 		}
 		.subheading {
 			font-size: 24px;
-			line-height: 1.1,
+			line-height: 1.1;
 			display: block;
 			.sans-serif;
 			font-weight: 300;
@@ -498,4 +505,31 @@ body {
 
 .taxonomy-page-header h1 {
 	color: #0085A1;
+}
+
+.overlay {
+	// This may require some playing around -- looks good to me in the inspector, but I may be forgetting something.
+	// This ensures the overlay is the full height of whatever element it's under -- in this case, .intro-header
+	// You'll need to make sure the parent <div> above .overlay gets a position relative.
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+@include bp(tablet) {
+	position: relative;
+}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		background: rgba(0, 0, 0, .5); // I wouldn't go lower than .3 here, but it depends on how readable you want the text.
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
 }
