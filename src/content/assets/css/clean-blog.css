@@ -125,20 +125,24 @@ hr.small {
 }
 .vid {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 48vh;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 100%;
+  padding-top: 50px;
+  opacity: .8;
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 769px) {
   .vid {
-    width: 200rem;
-    height: auto;
+    opacity: 1;
+    padding-top: 0;
   }
 }
 .intro-header {
+  position: relative;
+  min-height: 40rem;
   background-color: #808080;
   background: no-repeat center center;
   background-attachment: scroll;
@@ -175,8 +179,8 @@ hr.small {
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
   font-size: 24px;
-  line-height: 1.1,
-			display: block;
+  line-height: 1.1;
+  display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
@@ -425,4 +429,24 @@ body {
 }
 .taxonomy-page-header h1 {
   color: #0085A1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@include bp(tablet) {
+  position: relative;
+}
+.overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

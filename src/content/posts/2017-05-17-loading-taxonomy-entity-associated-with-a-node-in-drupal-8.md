@@ -5,6 +5,10 @@ subtitle: "From a block using dependency injection"
 categories: [drupal]
 tags: [drupal 8,dependency injection,taxonomy term,entity storage,node load, drupal console]
 author: "Gerardo"
+header_img:
+  url: "assets/img/lego-blocks.jpg"
+  author: "Kelly Sikkema"
+  author_url: http://kelsikkema.myportfolio.com
 ---
 
 ## Creating a new block to load the node's attached tid from
